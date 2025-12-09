@@ -53,23 +53,31 @@
 <p id="Status"></p> -->
 <!-- 
 <p id="title">Hello World!!</p> -->
-<button id="toggle" onclick="toggle()">Toggle</button>
-
+<!-- <button id="toggle" onclick="toggle()">Toggle</button> -->
+<p  id="msg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt tempore, at eligendi harum fuga, veritatis expedita, consequatur sequi laboriosam quisquam doloribus aspernatur assumenda saepe? Consectetur ipsa vero maiores quas.</p>
+ <button id="hide">Hide</button>
+ <button id="show">Show</button>
 <script>
-    
+    document.getElementById("msg").style.fontSize="30px";
+    document.getElementById("hide").addEventListener("click",()=>{
+        document.getElementById("msg").style.display="none";
+    })
+    document.getElementById("show").addEventListener("click",()=>{
+        document.getElementById("msg").style.display="block";
+    })
     // var buttonClicked=()=>{
     //     var title=document.getElementById('title');
     //     var result=title.innerText==="Hello World!!"?"Hello Shreenithi!!":"Hello World!!";
     //     title.innerText=result;
     // }
 
-    var toggle=()=>{
-        var color=["red","blue","green","orange","yellow","black","purple"]; 
-        var ind=Math.floor(Math.random()*color.length);
-        document.querySelector('body').style.backgroundColor=color[ind];
+    // var toggle=()=>{
+    //     var color=["red","blue","green","orange","yellow","black","purple"]; 
+    //     var ind=Math.floor(Math.random()*color.length);
+    //     document.querySelector('body').style.backgroundColor=color[ind];
 
-    }
-    // document.getElementById('myForm').addEventListener('submit', (e) => {
+    // }
+    // // document.getElementById('myForm').addEventListener('submit', (e) => {
     //     e.preventDefault();
 
     //     const email = document.getElementById("email").value;
